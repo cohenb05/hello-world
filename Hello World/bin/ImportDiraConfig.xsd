@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ImportDiraConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RunParameters">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ServerConnect" type="xs:string" />
+                
+              <xs:element name="DatabaseName" type="xs:string" />
+                
+              <!-- Used for OLD folder structure
+              <xs:element name="AssetsPath" type="xs:string" />
+              -->
+                
+              <!-- Used for NEW folder structure for WS, Radio Manchester and Radio London runs -->
+              <xs:element name="AssetsPath_WS-MANLON" type="xs:string" />
+                
+              <!-- Used for NEW folder structure for English Regions ViLoR Stations run
+              <xs:element name="AssetsPath_ER-VILOR" type="xs:string" />
+              -->
+
+              <xs:element name="ValidateSchema" type="xs:boolean" />
+                
+              <xs:element name="CopyAssets" type="xs:boolean" />
+                
+              <xs:element name="OverwriteAudioItem" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
